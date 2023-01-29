@@ -19,7 +19,7 @@ const { name, author } = require(join(__dirname, './package.json')) // https://w
 require("http").createServer((_, res) => res.end("Uptime!")).listen(8080)
 
 say('Bot Whatsapp MD', { font: 'chrome', align: 'center', gradient: ['blue', 'green'] })
-say(`'AMELIA BOTZ' By PUTRAMODZ`, { font: 'console', align: 'center', gradient: ['blue', 'green'] })
+say(`'SAXIA-BOTZ' By Khasan.Dev01`, { font: 'console', align: 'center', gradient: ['blue', 'green'] })
 
 var isRunning = false
 /**
