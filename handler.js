@@ -41,7 +41,7 @@ export async function handler(chatUpdate) {
         if (!m)
             return
         m.exp = 0
-        m.limit = false
+        m.limit = true
         try {
             // TODO: use loop to insert data instead of this
             let user = global.db.data.users[m.sender]
@@ -51,7 +51,7 @@ export async function handler(chatUpdate) {
                 if (!isNumber(user.exp))
                     user.exp = 0
                 if (!isNumber(user.limit))
-                    user.limit = 10
+                    user.limit = 45
                 if (!isNumber(user.lastclaim))
                     user.lastclaim = 0
                 if (!isNumber(user.pasangan))
@@ -339,7 +339,7 @@ export async function handler(chatUpdate) {
             } else
                 global.db.data.users[m.sender] = {
                     exp: 0,
-                    limit: 10,
+                    limit: 45,
                     lastclaim: 0,
                     registered: false,
                     antispam: 0,
@@ -751,7 +751,7 @@ export async function handler(chatUpdate) {
                 else
                     m.exp += xp
                 if (!isPrems && plugin.limit && global.db.data.users[m.sender].limit < plugin.limit * 1) {
-                    this.sendButton(m.chat, `[❗] *Limit Anda Habis, Beberapa Command Tidak Bisa Di Akses*`, author, null, [['Buy Limit', '/buy limit'], ['Menu', '/menu']] , m)
+                    this.sendButton(m.chat, `[❗] *Limit luhj abis yhahaha, Fitur Tidak Bisa Di Akses*`, author, null, [['Buy Limit', '/buy limit'], ['Menu', '/menu']] , m)
                     continue // Limit habis
                 }
                 if (plugin.level > _user.level) {
@@ -810,8 +810,7 @@ export async function handler(chatUpdate) {
                             console.error(e)
                         }
                     }
-                    if (m.limit)
-                        m.reply(+m.limit + ' ʟɪᴍɪᴛ ᴛᴇʀᴘᴀᴋᴀɪ ✔️')
+                  
                 }
                 break
             }
@@ -901,7 +900,7 @@ export async function participantsUpdate({ id, participants, action }) {
                         //this.sendFile(id, pp, 'pp.jpg', text, null, false, { mentions: [user] })
     this.sendHydrated(id, text, wm + '\n\n' + botdate, pp, sgc, (action == 'add' ? '💌 WELCOME' : '🐾 BYE'), user.split`@`[0], '🌹 USER', [
       ['ɪɴᴛʀᴏ', '/intro'],
-      [(action == 'add' ? '\n\nWADUH BEBAN GROUP NAMBAH 1 :(' : '\n\nBYE BEBAN! KLO BALIK LAGI KOCAK LU :)'), '...'],
+      [(action == 'add' ? '\n\nWADUH BEBAN GROUP NAMBAH 1 😱' : '\n\nDADA BEBAN! KLO BALIK LAGI LAWAK LU'), '...'],
       [null, null]
     ], null, false, { mentions: [user] })
                         }
@@ -923,10 +922,10 @@ export async function participantsUpdate({ id, participants, action }) {
 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=sketch-name&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&fillTextType=1&fillTextPattern=Warning!&text=',
 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=sketch-name&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&fillTextType=1&fillTextPattern=Warning!&fillColor1Color=%23f2aa4c&fillColor2Color=%23f2aa4c&fillColor3Color=%23f2aa4c&fillColor4Color=%23f2aa4c&fillColor5Color=%23f2aa4c&fillColor6Color=%23f2aa4c&fillColor7Color=%23f2aa4c&fillColor8Color=%23f2aa4c&fillColor9Color=%23f2aa4c&fillColor10Color=%23f2aa4c&fillOutlineColor=%23f2aa4c&fillOutline2Color=%23f2aa4c&backgroundColor=%23101820&text=']
 conn.sendButtonImg(id, `${pickRandom(flaaa2)}` + `Congratulation ` + '@user', 'Sᴇʟᴀᴍᴀᴛ Nᴀɪᴋ Jᴀʙᴀᴛᴀɴ', text, mentions: this.parseMention(text), { contextInfo: { externalAdReply: { showAdAttribution: true,
-    mediaUrl: 'https://facebook.com/sadtime098',
+    mediaUrl: 'https://instagram.com/@m.rxcl_',
     mediaType: 2, 
     description: sgc,
-    title: "Jᴀɴɢᴀɴ Lᴜᴘᴀ Mᴀɴᴅɪ!!",
+    title: "Jᴀɴɢᴀɴ Lᴜᴘᴀ Polow!!",
     body: wm,
     thumbnail: fs.readFileSync('./thumbnail.jpg'),
     sourceUrl: sgc
@@ -992,7 +991,7 @@ const fgclink = {
                "groupInviteMessage": {
                    "groupJid": "6282127487538-1625305606@g.us",
                    "inviteCode": "null",
-                   "groupName": "Halo", 
+                   "groupName": "Hamlo", 
                    "caption": wm, 
                    'jpegThumbnail': fs.readFileSync('./media/ok.jpg')
                }
@@ -1001,30 +1000,30 @@ const fgclink = {
        let tag = `@${m.sender.replace(/@.+/, '')}`
   let mentionedJid = [m.sender]
     let rown = {
-        rowner: 'Printah ini hanya di gunakan oleh *Developer BOT* !'}[type]
+        rowner: 'Printah ini hanya di gunakan oleh _*Developer BOT Xia*_ !'}[type]
   if (rown) return conn.sendButtonDocAccess(m.chat, ucapan() + tag + '\n' + rown, 'Only Developer', 'Owner', '.owner', m, adReply)
 
         
 let own = {
-owner: 'Printah ini hanya di gunakan oleh *Owner* !'}[type]
+owner: 'Printah ini hanya di gunakan oleh _*Developer BOT Xia*_ ! !'}[type]
   if (own) return conn.sendButtonDocAccess(m.chat, ucapan() + tag + '\n' + own, 'Only OWNER', 'Owner', '.owner', m, adReply)
 
 let mod = {
-mods: 'Printah ini hanya di gunakan oleh *Moderator BOT* !'}[type]
+mods: 'Printah ini hanya di gunakan oleh _*Developer BOT Xia*_ !'}[type]
   if (mod) return conn.sendButtonDocAccess(m.chat, ucapan() + tag + '\n' + mod, 'Only Moderator', 'MENU', '.menu', m, adReply)
 let prm = {
-        premium: 'Printah ini hanya di gunakan oleh member *Premium* !'}[type]
+        premium: 'Fitur ini khusus User _*Premium*_ ! Maka nya Upgrade'}[type]
   if (prm) return conn.sendButtonDocAccess(m.chat, ucapan() + tag + '\n' + prm, 'Only Premium', 'Beli Prem', '.uppremium', m, adReply)
 
 let gc = {
-        group: 'Printah ini hanya dapat di gunakan di dalam *Group* !'
+        group: 'Printah ini hanya dapat di gunakan di dalam _*Group*_ !'
         }[type]
   if (gc) return conn.sendButtonDocAccess(m.chat, ucapan() + tag + '\n' + gc, 'Only Group', 'MENU', '.menu', m, adReply)
 
 let msg = {
-        private: 'Printah ini hanya dapat di gunakan di *Private Chat !*',
-        admin: 'Printah ini hanya di gunakan oleh *Admin* !',
-        botAdmin: 'Printah ini hanya di gunakan ketika bot menjadi *Admin Group* !',
+        private: 'Fitur ini hanya bisa gunakan di *Private Chat !*',
+        admin: 'YAAD Yang Admin Admin Doang Chuy',
+        botAdmin: 'Oy Oy jadiin bo sebagai _*Admin Group*_ dulu lol',
         restrict: 'Restrict belum di nyalakan di chat ini !'}[type]
   /*  if (msg) return conn.sendButtonDoc(m.chat, msg, wm, 'Menu', '.menu', fgclink)*/
   if (msg) return conn.sendButtonDocAccess(m.chat, ucapan() + tag + '\n' + msg, wm, 'MENU', '.menu', m, adReply)
